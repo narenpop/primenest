@@ -47,7 +47,7 @@ export default function AboutContactPage() {
           start: "top 70%",
           onEnter: () => {
             statItems.forEach((item, index) => {
-              const numberEl = item.querySelector(".stat-number");
+              const numberEl = item.querySelector<HTMLElement>(".stat-number");
               if (numberEl) {
                 const targetNumber = parseInt(numberEl.textContent?.replace(/\D/g, "") || "0");
                 animateCounter(numberEl, targetNumber, 2);
